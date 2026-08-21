@@ -101,7 +101,6 @@ body{
 }
 .project-card img{
     width: 100%;
-    
     object-fit: cover;
 }
 .btn{
@@ -131,4 +130,119 @@ body{
    background-color:transparent;
     color: var(--white);
     border-color: var(--white);
+}
+section h2{
+    font-size: 2.2em;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+section h2::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+@keyframes fadeinup{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero-section h1{
+    animation: fadeinup 0.8s ease 0.2s both;
+}
+.tagline{
+    animation: fadeinup 0.8s ease 0.4s both;
+}
+.hero-button{
+    animation: fadeinup 0.8s ease 0.6s both;
+}
+.contact-section{
+    background-color: var(--light);
+}
+#contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group{
+    margin-bottom: 24px;
+}
+.form-group label{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-weight: 600px;
+    color: var(--primary);
+}
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 2px solid #dddddd;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 3px rgba(27, 79, 114, 0.15);
+}
+.site-footer{
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 5%;
+}
+@media (max-width: 768px){
+    .menu-toggle{
+        display:block
+    }
+    .nav-links{
+        display: none;
+    }
+    .hero-section h1{
+        font-size: 2rem;
+    }
+    .project-grid{
+        grid-template-columns: 1fr;
+    }
+}
+.menu-toggle{
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .menu-toggle{
+        display:block
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background: #1b4f72;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .nav-links.open{
+        display: flex;
+    }
 }
